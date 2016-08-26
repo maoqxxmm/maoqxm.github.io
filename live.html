@@ -28,10 +28,10 @@
 
         var getData = function() {
             $.ajax({
-                url: 'json.php?q=http://live.bilibili.com/area/home?area=sing-dance&order=online&cover=1',
+                url: 'json.php?q=http://api.bilibili.cn/userinfo?user=%E7%8C%AB%E5%A4%A7%E5%8F%AF',
                 dataType: 'json',
                 success: function(data) {
-                    console.log(data.data)
+                    console.log(data)
                 },
                 error: function() {
                     console.log('fail')
