@@ -27,11 +27,12 @@
         }
 
         var getData = function() {
+            // 暂时借用一个博主的跨域 等自己的服务器搭好再改
             $.ajax({
-                url: 'json.php?q=http://api.bilibili.cn/userinfo?user=%E7%8C%AB%E5%A4%A7%E5%8F%AF',
+                url: 'https://app.haotown.cn/bilibili/json.php?q=http://live.bilibili.com/area/home?area=sing-dance&order=online&cover=1',
                 dataType: 'json',
                 success: function(data) {
-                    console.log(data)
+                    console.log(data.data)
                 },
                 error: function() {
                     console.log('fail')
