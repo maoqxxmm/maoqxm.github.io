@@ -7,6 +7,18 @@
 </head>
 <body>
     <script type="text/javascript">
+        var renderInfo = function(data) {
+            var $time = $('<p>')
+            var $total = $('<p>')
+            var $list = $('<p>')
+
+            $time.html(new Date())
+            $total.html(data.total)
+            $list.html(data.list.length)
+
+            $('body').append($time).append($toatl).append($list)
+        }
+
         var renderModel = function(model) {
             var $el = $('<div>')
             $el.append('<span>' + model.title + '---' + model.uname + '---' + model.online + '</span>')
@@ -16,6 +28,7 @@
         var renderData = function(data) {
             var list = data.data.list
             $('body').html('')
+            renderInfo()
             list.forEach(function(up) {
                 var model = {
                     title: up.title,
