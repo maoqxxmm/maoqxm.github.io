@@ -30,7 +30,7 @@
             $.ajax({
                 url: 'http://hz.aliyun.xeroe.net:81/json.php?q=/area/home?area=sing-dance&order=online&cover=1',
                 success: function(data) {
-                    console.log(data.data)
+                    renderData(data)
                 },
                 error: function() {
                     console.log('fail')
