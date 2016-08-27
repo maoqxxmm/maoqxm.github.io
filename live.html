@@ -13,8 +13,8 @@
             var $list = $('<p>')
 
             $time.html(new Date())
-            $total.html(data.total)
-            $list.html(data.list.length)
+            $total.html(data.data.total)
+            $list.html(data.data.list.length)
 
             $('body').append($time).append($toatl).append($list)
         }
@@ -28,7 +28,7 @@
         var renderData = function(data) {
             var list = data.data.list
             $('body').html('')
-            renderInfo()
+            renderInfo(data)
             list.forEach(function(up) {
                 var model = {
                     title: up.title,
